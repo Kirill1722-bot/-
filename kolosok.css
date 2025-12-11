@@ -1,0 +1,268 @@
+/* Kolosok Theme - Золотистые/коричневые тона */
+
+/* Основные цвета темы */
+:root {
+    --primary-color: #8B4513; /* Коричневый */
+    --secondary-color: #D2691E; /* Шоколадный */
+    --accent-color: #FFD700; /* Золотой */
+    --light-color: #FFF8DC; /* Светлый бежевый */
+    --dark-color: #654321; /* Тёмно-коричневый */
+}
+
+/* Шапка */
+#main-header {
+    background-color: var(--primary-color) !important;
+}
+
+.logo h1 {
+    color: var(--accent-color);
+}
+
+/* Переключатель */
+.village-switch {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.village-switch a.active {
+    background-color: var(--secondary-color) !important;
+    color: white;
+}
+
+.village-switch a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Кнопка входа */
+#login-btn {
+    background-color: var(--secondary-color) !important;
+}
+
+#login-btn:hover {
+    background-color: var(--dark-color) !important;
+}
+
+/* Главная секция */
+.hero {
+    background: linear-gradient(rgba(139, 69, 19, 0.85), rgba(139, 69, 19, 0.8)),
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') !important;
+}
+
+.cta-button {
+    background-color: var(--secondary-color) !important;
+    border: 2px solid var(--accent-color);
+}
+
+.cta-button:hover {
+    background-color: var(--dark-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+}
+
+/* Карточки участков */
+.plot-card {
+    border-top: 4px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.plot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+}
+
+.price {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.plot-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.plot-btn:hover {
+    background-color: var(--dark-color);
+}
+
+/* Фильтры */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: white;
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.filter-btn:hover:not(.active) {
+    background-color: var(--light-color);
+}
+
+/* Инфраструктура */
+.infra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.infra-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+}
+
+.infra-item i {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* О посёлке */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Форма */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    border: 1px solid var(--secondary-color) !important;
+}
+
+.contact-form button {
+    background-color: var(--primary-color) !important;
+}
+
+.contact-form button:hover {
+    background-color: var(--dark-color) !important;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-logo h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Иконки в меню */
+.main-nav a i {
+    color: var(--accent-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}

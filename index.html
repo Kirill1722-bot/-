@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДПК Заповедное - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1><i class="fas fa-tree"></i> ДПК "Заповедное"</h1>
+            </div>
+            
+            <!-- Переключатель -->
+            <div class="village-switch">
+                <a href="index.html" class="active">Заповедное</a>
+                <a href="kolosok.html">Колосок</a>
+            </div>
+            
+            <!-- Меню -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> О посёлке</a></li>
+                    <li><a href="#plots"><i class="fas fa-map-marked-alt"></i> Участки</a></li>
+                    <li><a href="#infra"><i class="fas fa-road"></i> Инфраструктура</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="#news"><i class="fas fa-newspaper"></i> Новости</a></li>
+                    <li><a href="#contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><button id="login-btn"><i class="fas fa-user"></i> Вход</button></li>
+                </ul>
+            </nav>
+            
+            <!-- Мобильное меню -->
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Главная -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <h2>ДПК "Заповедное"</h2>
+                <p>Экологически чистый дачный посёлок в живописной местности Ленинградской области</p>
+                <button class="cta-button" onclick="window.location.href='#plots'">Посмотреть участки</button>
+            </div>
+        </section>
+
+        <!-- О посёлке -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2><i class="fas fa-tree"></i> О посёлке "Заповедное"</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p><strong>ДПК "Заповедное"</strong> — современный дачный посёлок, созданный для тех, кто ценит природу, чистый воздух и комфорт за городом.</p>
+                        <p>Посёлок расположен во Всеволожском районе Ленинградской области, в 25 км от КАД. Общая площадь — 45 гектар. Уникальное расположение: с одной стороны — смешанный лес, с другой — поле с живописным ландшафтом.</p>
+                        <p>Основан в 2010 году. На сегодняшний день в посёлке проживает более 80 семей. Управление осуществляется выборным правлением, председатель — Иванов Сергей Петрович.</p>
+                        <p>Все участки имеют кадастровые номера, право собственности оформляется в Регпалате. Посёлок включён в генеральный план развития района.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>45 га</h3>
+                            <p>Общая площадь</p>
+                        </div>
+                        <div class="stat">
+                            <h3>80+</h3>
+                            <p>Семей проживает</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2010</h3>
+                            <p>Год основания</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15 км</h3>
+                            <p>До КАД</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Участки с фильтрами -->
+        <section id="plots" class="section dark">
+            <div class="container">
+                <h2>Участки в продаже</h2>
+                
+                <!-- Фильтры -->
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label>Площадь (соток):</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Все</button>
+                            <button class="filter-btn" data-filter="area-6-8">6-8</button>
+                            <button class="filter-btn" data-filter="area-8-10">8-10</button>
+                            <button class="filter-btn" data-filter="area-10-12">10-12</button>
+                            <button class="filter-btn" data-filter="area-12plus">12+</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Цена (тыс. руб.):</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="price-300">до 300</button>
+                            <button class="filter-btn" data-filter="price-300-500">300-500</button>
+                            <button class="filter-btn" data-filter="price-500plus">от 500</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>Статус:</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn" data-filter="status-available">В продаже</button>
+                            <button class="filter-btn" data-filter="status-reserved">Бронь</button>
+                            <button class="filter-btn" data-filter="status-sold">Продано</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Каталог участков -->
+                <div class="plots-grid" id="plots-grid">
+                    <!-- Участки добавятся через JS -->
+                </div>
+                
+                <div class="total-plots">
+                    <p>Найдено участков: <span id="plot-count">0</span> из 15</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Инфраструктура -->
+        <section id="infra" class="section">
+            <div class="container">
+                <h2>Инфраструктура посёлка</h2>
+                <div class="infra-grid">
+                    <div class="infra-item">
+                        <i class="fas fa-bolt fa-3x"></i>
+                        <h3>Электричество</h3>
+                        <p>15 кВт на участок, подземный кабель, бесперебойное питание, установлены счётчики</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-tint fa-3x"></i>
+                        <h3>Водоснабжение</h3>
+                        <p>Артезианская скважина 120м, водонапорная башня, летний водопровод, зимние колонки</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-road fa-3x"></i>
+                        <h3>Дороги</h3>
+                        <p>Асфальтированные подъезды, освещение, парковочные карманы, тротуары</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h3>Охрана</h3>
+                        <p>КПП с шлагбаумом, видеонаблюдение по периметру, ночной патруль, тревожная кнопка</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-wifi fa-3x"></i>
+                        <h3>Связь</h3>
+                        <p>Оптоволоконный интернет, сотовая связь всех операторов, Wi-Fi в зоне общего пользования</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-store fa-3x"></i>
+                        <h3>Магазины</h3>
+                        <p>Продуктовый магазин в 500м, строительный магазин в 2км, доставка продуктов в посёлок</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section dark">
+            <div class="container">
+                <h2>Фотогалерея</h2>
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-category="all">Все фото</button>
+                    <button class="gallery-tab" data-category="nature">Природа</button>
+                    <button class="gallery-tab" data-category="infrastructure">Инфраструктура</button>
+                    <button class="gallery-tab" data-category="plots">Участки</button>
+                    <button class="gallery-tab" data-category="life">Жизнь в посёлке</button>
+                </div>
+                <div class="gallery" id="gallery-container">
+                    <!-- Галерея будет добавлена через JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Новости -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2><i class="fas fa-newspaper"></i> Новости и объявления</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">Март</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Общее собрание собственников</h3>
+                            <p>Уважаемые жители! Приглашаем на общее собрание, которое состоится 25 марта в 19:00 в клубе посёлка. В повестке: утверждение сметы на 2024 год, выборы председателя, вопросы благоустройства.</p>
+                            <a href="#" class="news-link">Подробнее →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="day">10</span>
+                            <span class="month">Март</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Начало дачного сезона</h3>
+                            <p>С 1 апреля открывается дачный сезон. Водопровод будет запущен 5 апреля после проверки систем. Электричество включено в штатном режиме. Просьба проверить свои участки после зимы.</p>
+                            <a href="#" class="news-link">Подробнее →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="day">28</span>
+                            <span class="month">Фев</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Ремонт центральной дороги</h3>
+                            <p>С 1 по 10 марта будет производиться ямочный ремонт центральной дороги. Просьба соблюдать осторожность и правила проезда. Въезд для грузового транспорта временно ограничен.</p>
+                            <a href="#" class="news-link">Подробнее →</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-date">
+                            <span class="day">20</span>
+                            <span class="month">Фев</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Новая детская площадка</h3>
+                            <p>Установлена новая детская площадка возле клуба. Оборудование: горка, качели, карусель, песочница. Приглашаем детей и родителей для тестирования! Открытие состоится 1 марта.</p>
+                            <a href="#" class="news-link">Подробнее →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-news">
+                    <a href="#" class="all-news-link">Все новости →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты с картой -->
+        <section id="contacts" class="section dark">
+            <div class="container">
+                <h2>Контакты и расположение</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3><i class="fas fa-phone"></i> Контактная информация</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Телефон:</strong>
+                                <p>+7 (812) 345-67-89 (офис)</p>
+                                <p>+7 (921) 987-65-43 (председатель)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>info@zapovednoe.ru (общие вопросы)</p>
+                                <p>sales@zapovednoe.ru (покупка участков)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Адрес:</strong>
+                                <p>Ленинградская область,</p>
+                                <p>Всеволожский район,</p>
+                                <p>пос. Заповедное, ул. Центральная, 1</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Режим работы офиса:</strong>
+                                <p>Пн-Пт: 9:00-18:00</p>
+                                <p>Сб: 10:00-16:00</p>
+                                <p>Вс: выходной</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3><i class="fas fa-edit"></i> Форма обратной связи</h3>
+                        <form id="feedback-form">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Телефон" required>
+                            <input type="email" placeholder="Email">
+                            <select required>
+                                <option value="">Тема обращения</option>
+                                <option value="buy">Покупка участка</option>
+                                <option value="info">Общая информация</option>
+                                <option value="problem">Проблема/вопрос</option>
+                                <option value="suggestion">Предложение</option>
+                            </select>
+                            <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+                            <button type="submit"><i class="fas fa-paper-plane"></i> Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Карта -->
+                <div class="map-container">
+                    <h3><i class="fas fa-map"></i> Как добраться</h3>
+                    <div id="map"></div>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-car"></i> От КАД: по Приозерскому шоссе 15км, поворот на Бернгардовку, далее 5км по указателям
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-tree"></i> ДПК "Заповедное"</h3>
+                    <p>Экология, комфорт, безопасность</p>
+                    <p>С 2010 года</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <a href="#home">Главная</a>
+                    <a href="#about">О посёлке</a>
+                    <a href="#plots">Участки</a>
+                    <a href="#infra">Инфраструктура</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#news">Новости</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer-contacts">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (812) 345-67-89</p>
+                    <p><i class="fas fa-envelope"></i> info@zapovednoe.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Всеволожский район, ЛО</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="copyright">© 2024 ДПК "Заповедное"<br>Сайт создан для производственной практики</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно входа -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-user-lock"></i> Вход в личный кабинет</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Номер участка или email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Запомнить меня
+                    </label>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit"><i class="fas fa-sign-in-alt"></i> Войти</button>
+            </form>
+            <div class="modal-footer">
+                <p>Нет аккаунта? <a href="#" class="register-link">Зарегистрироваться</a></p>
+                <p class="access-note">* Доступ к документам и обсуждениям только для жителей</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a8c2e01e-635a-420c-8701-c577705c02fd&lang=ru_RU"></script>
+</body>
+</html>

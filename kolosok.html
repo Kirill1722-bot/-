@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДПК Колосок</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kolosok.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery-bundle.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1><i class="fas fa-wheat"></i> ДПК "Колосок"</h1>
+            </div>
+            
+            <!-- Переключатель -->
+            <div class="village-switch">
+                <a href="index.html">Заповедное</a>
+                <a href="kolosok.html" class="active">Колосок</a>
+            </div>
+            
+            <!-- Меню -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> О посёлке</a></li>
+                    <li><a href="#plots"><i class="fas fa-map-marked-alt"></i> Участки</a></li>
+                    <li><a href="#infra"><i class="fas fa-road"></i> Инфраструктура</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="#contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><button id="login-btn"><i class="fas fa-user"></i> Вход</button></li>
+                </ul>
+            </nav>
+            
+            <!-- Мобильное меню -->
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Главная -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <h2>Дачный посёлок "Колосок"</h2>
+                <p>Уют, традиции, семейные ценности</p>
+                <button class="cta-button" onclick="window.location.href='#plots'">Смотреть участки</button>
+            </div>
+        </section>
+
+        <!-- О посёлке -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2><i class="fas fa-wheat"></i> О посёлке "Колосок"</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Основан в 2008 году. Уютный, семейный посёлок для тех, кто ценит традиции и спокойствие.</p>
+                        <p>Название "Колосок" символизирует плодородие, достаток и связь с землёй.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>лет существования</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>семей проживает</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>участков с коммуникациями</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Участки -->
+        <section id="plots" class="section dark">
+            <div class="container">
+                <h2>Участки в продаже</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="small">До 10 соток</button>
+                    <button class="filter-btn" data-filter="medium">10-12 соток</button>
+                    <button class="filter-btn" data-filter="large">От 12 соток</button>
+                </div>
+                <div class="plots-grid">
+                    <div class="plot-card" data-size="medium">
+                        <h3>Участок №7</h3>
+                        <p><i class="fas fa-ruler-combined"></i> 11 соток</p>
+                        <p><i class="fas fa-tree"></i> Лесной участок</p>
+                        <p class="price">420 000 ₽</p>
+                        <button class="plot-btn">Подробнее</button>
+                    </div>
+                    <div class="plot-card" data-size="small">
+                        <h3>Участок №12</h3>
+                        <p><i class="fas fa-ruler-combined"></i> 8 соток</p>
+                        <p><i class="fas fa-sun"></i> Солнечная сторона</p>
+                        <p class="price">320 000 ₽</p>
+                        <button class="plot-btn">Подробнее</button>
+                    </div>
+                    <div class="plot-card" data-size="large">
+                        <h3>Участок №18</h3>
+                        <p><i class="fas fa-ruler-combined"></i> 14 соток</p>
+                        <p><i class="fas fa-water"></i> Близко к водоёму</p>
+                        <p class="price">580 000 ₽</p>
+                        <button class="plot-btn">Подробнее</button>
+                    </div>
+                    <div class="plot-card" data-size="medium">
+                        <h3>Участок №21</h3>
+                        <p><i class="fas fa-ruler-combined"></i> 10 соток</p>
+                        <p><i class="fas fa-home"></i> Рядом с въездом</p>
+                        <p class="price">390 000 ₽</p>
+                        <button class="plot-btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Инфраструктура -->
+        <section id="infra" class="section">
+            <div class="container">
+                <h2>Инфраструктура</h2>
+                <div class="infra-grid">
+                    <div class="infra-item">
+                        <i class="fas fa-bolt fa-3x"></i>
+                        <h3>Электричество</h3>
+                        <p>15 кВт на участок, подземный кабель</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-tint fa-3x"></i>
+                        <h3>Водоснабжение</h3>
+                        <p>Скважина, водонапорная башня</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-road fa-3x"></i>
+                        <h3>Дороги</h3>
+                        <p>Асфальтированные подъезды</p>
+                    </div>
+                    <div class="infra-item">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h3>Охрана</h3>
+                        <p>КПП, видеонаблюдение</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="section dark">
+            <div class="container">
+                <h2>Наша галерея</h2>
+                <div class="gallery" id="gallery-container">
+                    <!-- Картинки добавятся через JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contacts" class="section">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3><i class="fas fa-phone"></i> Телефоны</h3>
+                        <p>+7 (495) 123-45-67</p>
+                        <p>+7 (925) 765-43-21</p>
+                        
+                        <h3><i class="fas fa-envelope"></i> Email</h3>
+                        <p>info@kolosok-dacha.ru</p>
+                        
+                        <h3><i class="fas fa-map-marker-alt"></i> Адрес</h3>
+                        <p>Московская область, Истринский район</p>
+                        
+                        <h3><i class="fas fa-clock"></i> Приёмные часы</h3>
+                        <p>Пн-Пт: 10:00-18:00</p>
+                        <p>Сб: 10:00-16:00</p>
+                        <p>Вс: выходной</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Записаться на просмотр</h3>
+                        <form id="kolosok-form">
+                            <input type="text" placeholder="ФИО" required>
+                            <input type="tel" placeholder="Телефон" required>
+                            <input type="email" placeholder="Email">
+                            <select required>
+                                <option value="">Выберите участок</option>
+                                <option value="7">Участок №7 (11 соток)</option>
+                                <option value="12">Участок №12 (8 соток)</option>
+                                <option value="18">Участок №18 (14 соток)</option>
+                                <option value="21">Участок №21 (10 соток)</option>
+                            </select>
+                            <textarea placeholder="Ваш вопрос или комментарий" rows="3"></textarea>
+                            <button type="submit">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-wheat"></i> ДПК "Колосок"</h3>
+                    <p>С 2008 года</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Главная</a>
+                    <a href="#about">О посёлке</a>
+                    <a href="#plots">Участки</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <p>Мы в соцсетях:</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ДПК "Колосок". Все права защищены.</p>
+                <p>Сайт создан для производственной практики</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход для жителей "Колосок"</h2>
+            <form id="login-form">
+                <input type="text" placeholder="Логин (номер участка)" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p class="modal-note">Доступ к документам и обсуждениям только для жителей посёлка</p>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <script src="kolosok.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a8c2e01e-635a-420c-8701-c577705c02fd&lang=ru_RU"></script>
+</body>
+</html>
